@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@zerodevx/svelte-toast/css';
+@import '/js-cookie';
+@import '@types/js-cookie'
