@@ -1,14 +1,15 @@
-FROM node:18-slim
-
+FROM node:18-alpine AS builder
 WORKDIR /app
-COPY . .
-# This will do the trick, use the corresponding env file for each environment.
+COPY package*.json .
 RUN yarn install
+COPY . .
 RUN yarn run build
 
-EXPOSE 5173
-
-ENV PORT 5173
-ENV HOSTNAME "0.0.0.0"
-
-CMD ["yarn", "run", "dev"]
+FROM node:18-alpine
+WORKDIR /app
+COPY --from=builder /app/build build/
+COPY --from=builder /app/node_modules node_modules/
+COPY package.json .
+EXPOSE 3000
+ENV NODE_ENV=production
+CMD [ "node", "build" ]
