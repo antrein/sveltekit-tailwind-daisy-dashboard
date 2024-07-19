@@ -19,11 +19,6 @@ RUN yarn run build
 
 ENV NODE_ENV=production
 
-RUN addgroup --gid 1003 --system nodejs
-RUN adduser --system --uid 1003 vitejs
-
-USER vitejs:nodejs
-
 EXPOSE 4173
 
 ENV PORT 4173
