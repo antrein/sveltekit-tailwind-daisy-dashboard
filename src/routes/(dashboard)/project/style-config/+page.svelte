@@ -37,7 +37,7 @@
           return;
         }
         const { token } = JSON.parse(decodeURIComponent(auth));
-        const response = await fetch(`https://api.antrein.com/bc/dashboard/project/detail/${selectedProject}`, {
+        const response = await fetch(`https://api.antrein14.cloud/bc/dashboard/project/detail/${selectedProject}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -108,7 +108,7 @@
           formDataToSend.append('queue_page_title', $formData.queue_page_title);
         }
   
-        const response = await fetch('https://api.antrein.com/bc/dashboard/project/style', {
+        const response = await fetch('https://api.antrein14.cloud/bc/dashboard/project/style', {
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${token}`,

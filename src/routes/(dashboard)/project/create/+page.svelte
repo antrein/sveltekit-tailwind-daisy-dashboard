@@ -25,7 +25,7 @@
           return;
         }
         const { token } = JSON.parse(decodeURIComponent(auth));
-        const response = await fetch('https://api.antrein.com/bc/dashboard/project', {
+        const response = await fetch('https://api.antrein14.cloud/bc/dashboard/project', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

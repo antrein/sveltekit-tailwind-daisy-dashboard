@@ -26,7 +26,7 @@
   
       try {
         const { email, password } = get(formData);
-        const res = await fetch('https://api.antrein.com/bc/dashboard/auth/login', {
+        const res = await fetch('https://api.antrein14.cloud/bc/dashboard/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

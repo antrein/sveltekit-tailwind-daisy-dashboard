@@ -31,6 +31,7 @@
 	"dependencies": {
 		"@types/js-cookie": "^3.0.6",
 		"@zerodevx/svelte-toast": "^0.9.5",
-		"js-cookie": "^3.0.5"
+		"js-cookie": "^3.0.5",
+		"recharts": "^2.12.7"
 	}
 }

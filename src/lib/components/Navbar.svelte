@@ -1,22 +1,4 @@
-<!-- "use client"; -->
-
-<!-- import { useRouter } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import Button from "./Button";
-import Cookies from "js-cookie"; -->
-<!-- import NavbarSelectProject from "./NavbarSelectProject"; -->
-
-<!-- const Navbar = () => {
-  const router = useRouter();
-
-  const handleLogout = () => {
-    Cookies.remove("auth");
-    Cookies.remove("project");
-    router.push("/login");
-  }; -->
-  <!-- return ( -->
-  <script lang="ts">
+<script lang="ts">
         import Cookies from 'js-cookie';
 
     import logo from '$lib/assets/antrein-logo.svg';
@@ -80,7 +62,3 @@ import Cookies from "js-cookie"; -->
         </div>
       </div>
     </div>
-  <!-- );
-};
-
-export default Navbar; -->
