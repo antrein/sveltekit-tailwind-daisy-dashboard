@@ -58,6 +58,4 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         </ul>
       </div>
     </div>
-  <!-- );
-};
 
