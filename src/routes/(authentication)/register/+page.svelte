@@ -54,7 +54,7 @@
   
       try {
         const { email, name, password } = get(formData);
-        const res = await fetch('https://api.antrein14.cloud/bc/dashboard/auth/register', {
+        const res = await fetch('https://api.antrein.com/bc/dashboard/auth/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

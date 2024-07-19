@@ -24,7 +24,7 @@
         }
         const authParsed = JSON.parse(auth);
         const { token } = authParsed;
-        const response = await fetch('https://api.antrein14.cloud/bc/dashboard/project/list', {
+        const response = await fetch('https://api.antrein.com/bc/dashboard/project/list', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

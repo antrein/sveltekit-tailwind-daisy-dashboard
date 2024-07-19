@@ -28,7 +28,7 @@
           return;
         }
         const { token } = JSON.parse(decodeURIComponent(auth));
-        const response = await fetch(`https://api.antrein14.cloud/bc/dashboard/project/detail/${selectedProject}`, {
+        const response = await fetch(`https://api.antrein.com/bc/dashboard/project/detail/${selectedProject}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -70,7 +70,7 @@
           return;
         }
         const { token } = JSON.parse(decodeURIComponent(auth));
-        const response = await fetch(`https://api.antrein14.cloud/bc/dashboard/project/health/${selectedProject}`, {
+        const response = await fetch(`https://api.antrein.com/bc/dashboard/project/health/${selectedProject}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -140,7 +140,7 @@
           return;
         }
         const { token } = JSON.parse(decodeURIComponent(auth));
-        const response = await fetch(`https://api.antrein14.cloud/bc/dashboard/project/config`, {
+        const response = await fetch(`https://api.antrein.com/bc/dashboard/project/config`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
