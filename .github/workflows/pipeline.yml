@@ -15,7 +15,7 @@ on:
 
 env:
   PROJECT_NAME: ${{ github.event.repository.name }}
-  PORT: 4173
+  PORT: 5173
   BRANCH: ${{ github.ref == 'refs/heads/staging' && 'staging' || 'production' }}
   REGISTRY_REPO: antrein
 

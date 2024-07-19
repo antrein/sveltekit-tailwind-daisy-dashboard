@@ -1,27 +1,14 @@
-FROM node:18-slim AS base
-
-# 1. Install dependencies only when needed
-FROM base AS deps
+FROM node:18-slim
 
 WORKDIR /app
-
-# Install dependencies based on the preferred package manager
-COPY package.json package-lock.json ./
-RUN npm install
-
-# 2. Rebuild the source code only when needed
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 # This will do the trick, use the corresponding env file for each environment.
+RUN yarn install
 RUN yarn run build
 
-ENV NODE_ENV=production
+EXPOSE 5173
 
-EXPOSE 4173
-
-ENV PORT 4173
+ENV PORT 5173
 ENV HOSTNAME "0.0.0.0"
 
-CMD ["yarn", "run", "preview"]
+CMD ["yarn", "run", "dev"]
